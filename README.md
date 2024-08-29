@@ -118,7 +118,7 @@ const filteredMessages = createFibArray(10, TransparentArray(prettyPrint))
 
 
 
-Install Package:
+## Install Package:
 ```bash
 npm install transparent-array
 ```
