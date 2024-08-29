@@ -1,4 +1,4 @@
-import  { Observable, ReplaySubject, Subject } from "rxjs";
+import  { filter, Observable, ReplaySubject, Subject } from "rxjs";
 
 enum MessageType {
   Access = "ACCESS",
@@ -283,36 +283,3 @@ export function prettyPrint(sub: Subject<Message>) {
   });
 }
 
-function fib(n: number): number {
-    if (n === 0) {
-      return 0;
-    }
-    else if (n === 1) {
-      return 1;
-    }
-    else {
-      return fib(n - 1) + fib(n - 2);
-    }
-  }
-
-
-  
-
-
-function createFibArray(n: number, arr: TransparentArray<number>): TransparentArray<number> {
-  if (n <= 0) {
-    throw new Error("The input number must be greater than 0");
-  }
-
-  for (let i = 0; i < n; i++) {
-    if (i <= 1) {
-      arr.push(i);
-    } else {
-      arr.push(arr[i - 1] + arr[i - 2]);
-    }
-  }
-  
-  return arr;
-}
-
-console.log(createFibArray(10, new TransparentArray<number>(prettyPrint)));
