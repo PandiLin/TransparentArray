@@ -1,5 +1,13 @@
 # TransparentArray
 
+Most of the complex iteration and data modification is relying on array modification,
+when we want to debug or to understand the data flow, we always need to use console.log on a lot of different middle steps,
+
+but what if we can use a custom array to which just log the every access, modifications, construction of the array?
+perhaps it can be a handy tool to understand the data flow and the state of the array.
+
+
+
 TransparentArray is a custom array implementation in TypeScript that provides transparency into array operations. It extends the native Array class and uses RxJS Subjects to emit messages about array modifications and accesses.
 
 ## Features
@@ -16,7 +24,7 @@ TransparentArray is a custom array implementation in TypeScript that provides tr
 ```typescript
 import { TransparentArray, prettyPrint } from './TransparentArray';
 
-function createFibArray(n: number, arr: TransparentArray<number>): TransparentArray<number> {
+function createFibArray(n: number, arr: number[]): number[]{
   if (n <= 0) {
     throw new Error("The input number must be greater than 0");
   }
