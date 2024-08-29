@@ -2,7 +2,7 @@
   "name": "transparent-array",
   "module": "index.ts",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "devDependencies": {
     "@types/bun": "latest"
   },

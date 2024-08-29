@@ -1,12 +1,12 @@
 import  { filter, Observable, ReplaySubject, Subject } from "rxjs";
 
-enum MessageType {
+export enum MessageType {
   Access = "ACCESS",
   Modify = "MODIFY",
   New = "NEW",
 }
 
-class Message {
+export class Message {
   readonly type: MessageType;
   readonly method: string;
   readonly args: any[];
