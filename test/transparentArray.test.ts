@@ -37,6 +37,7 @@ describe("TransparentArray", () => {
     const arr = new TransparentArray(mockSubscribe, 1, 2, 3);
     const popped = arr.pop();
     expect(popped).toBe(3);
+
     expect(arr.items).toEqual([1, 2]);
     expect(messages[1].type).toBe("MODIFY");
     expect(messages[1].method).toBe("pop");

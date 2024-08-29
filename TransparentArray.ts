@@ -25,7 +25,8 @@ export class TransparentArray<T> extends Array<T> {
   subscribe: (sub: Subject<Message>) => void;
   items: T[];
   constructor(subscribe: (sub: Subject<Message>) => void, ...items: T[]) {
-    super(...items);
+    // solely confirm to protocols, so super is not needed
+    super();
     Object.setPrototypeOf(this, TransparentArray.prototype);
 
     if (typeof subscribe !== 'function') {
@@ -57,6 +58,8 @@ export class TransparentArray<T> extends Array<T> {
     });
   }
 
+  
+
   // Override push method to update items array
   push(...items: T[]): number {
   
@@ -66,7 +69,7 @@ export class TransparentArray<T> extends Array<T> {
   }
 
   pop(): T | undefined {
-    const item = this.items.pop();
+    const item = this.pop();
     this.gatherer.next(new Message(MessageType.Modify, 'pop', [item], this.items));
     return item;
   }
