@@ -83,6 +83,7 @@ Type: MODIFY Method: push Args: [34] Array: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 34
 
 ```typescript
 // filter out the access messages
+// there will be some complaining from typescript, but compiler is always complaining, just ignore it
 const filteredMessages = createFibArray(10, TransparentArray(prettyPrint))
   .pipe(filter((msg) => msg.type === MessageType.Access)
         prettyPrint)
@@ -109,6 +110,15 @@ const filteredMessages = createFibArray(10, TransparentArray(prettyPrint))
 
 
 
+Install Package:
+```bash
+npm install transparent-array
+```
+or 
+
+```bash
+bun install transparent-array
+```
 
 
 
