@@ -36,7 +36,7 @@ console.log(createFibArray(10, []));
 // CONSOLE: [ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 ]
 
 createFibArray(10, TransparentArray(prettyPrint));
-```
+
 
 ### CONSOLE:
 
@@ -77,13 +77,14 @@ Type: ACCESS Method: index Args: ["8"] Array: [0, 1, 1, 2, 3, 5, 8, 13, 21, 21]
 Type: ACCESS Method: index Args: ["7"] Array: [0, 1, 1, 2, 3, 5, 8, 13, 21, 21]
 Type: MODIFY Method: index Args: ["9",34] Array: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 Type: MODIFY Method: push Args: [34] Array: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 34]
+```
 
 ```typescript
 // filter out the access messages
 const filteredMessages = createFibArray(10, TransparentArray(prettyPrint))
   .pipe(filter((msg) => msg.type === MessageType.Access)
         prettyPrint)
-```
+
 
 ### CONSOLE:
  Type: ACCESS Method: index Args: ["1"] Array: [0, 1, 1]
