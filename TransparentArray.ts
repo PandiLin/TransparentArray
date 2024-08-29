@@ -59,8 +59,8 @@ export class TransparentArray<T> extends Array<T> {
 
   // Override push method to update items array
   push(...items: T[]): number {
-    const result = super.push(...items);
-    this.items.push(...items);
+  
+    const result = this.items.push(...items);
     this.gatherer.next(new Message(MessageType.Modify, 'push', items, this.items));
     return result;
   }
