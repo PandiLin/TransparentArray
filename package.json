@@ -1,7 +1,8 @@
 {
-  "name": "transparentarray",
+  "name": "transparent-array",
   "module": "index.ts",
   "type": "module",
+  "version": "0.0.1",
   "devDependencies": {
     "@types/bun": "latest"
   },
