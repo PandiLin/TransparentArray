@@ -32,14 +32,16 @@ function createFibArray(n: number, arr: TransparentArray<number>): TransparentAr
   return arr;
 }
 
+
 console.log(createFibArray(10, []));
-// CONSOLE: [ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 ]
+
+### CONSOLE:
+[ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 ]
+
 
 createFibArray(10, TransparentArray(prettyPrint));
 
-
 ### CONSOLE:
-
 Type: NEW Method: constructor Args: [[]] Array: []
 Type: MODIFY Method: index Args: ["0",0] Array: [0]
 Type: MODIFY Method: push Args: [0] Array: [0, 0]
